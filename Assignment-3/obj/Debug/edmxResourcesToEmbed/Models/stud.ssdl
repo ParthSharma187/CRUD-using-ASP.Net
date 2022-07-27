@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="studentsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="std">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="student_regno" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="student_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="academic_session" Type="date" Nullable="false" />
+    <Property Name="academic_term" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="class_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="class_abbrev" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="class_group" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="subject_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="student_mark" Type="int" Nullable="false" />
+    <Property Name="category" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="studentsModelStoreContainer">
+    <EntitySet Name="std" EntityType="Self.std" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

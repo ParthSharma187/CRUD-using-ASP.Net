@@ -1,0 +1,88 @@
+﻿@model IEnumerable<Assignment_3.Models.std>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.student_regno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.student_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.academic_session)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.academic_term)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.class_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.class_abbrev)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.class_group)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.subject_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.student_mark)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.category)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.student_regno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.student_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.academic_session)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.academic_term)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.class_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.class_abbrev)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.class_group)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.subject_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.student_mark)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.category)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>
